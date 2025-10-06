@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="assets/favicon.png">
+<style>
+:root{--bg:#000;--gold:#c79a3d;--muted:#d9be86}
+body{margin:0;background:var(--bg);color:var(--muted);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+.container{max-width:1100px;margin:0 auto;padding:18px}
+.top{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:56px}
+nav a{color:var(--muted);margin-left:16px;text-decoration:none;font-weight:600}
+a.btn{background:var(--gold);color:#000;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
+.section{padding:40px 18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:rgba(200,160,70,0.03);padding:14px;border-radius:10px}
+.footer{padding:20px;text-align:center;border-top:1px solid rgba(200,160,70,0.04);color:var(--muted)}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.top{flex-direction:column;gap:12px}.logo img{height:48px}}
+@media(max-width:480px){.cards{grid-template-columns:1fr}}
+</style>
+</head><body>
+<header style="background:linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.2));">
+  <div class="container top">
+    <div class="logo"><img src="assets/logo.png" alt="Fenixcar logo"><strong style="color:var(--muted)">FENIXCAR</strong></div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="services.html">Serviços</a>
+      <a href="about.html">Sobre</a>
+      <a href="contact.html">Contato</a>
+      <a class="btn" href="https://wa.me/5561986221002" target="_blank">WhatsApp</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<section class="section" id="contact">
+  <h2 style="color:var(--gold)">Contato</h2>
+  <p style="color:#d9d1bd">Entre em contato para agendar ou solicitar um orçamento.</p>
+  <form onsubmit="event.preventDefault();var n=document.getElementById('name').value;var p=document.getElementById('phone').value;var s=document.getElementById('service').value;var d=document.getElementById('date').value;window.open('https://wa.me/5561986221002?text='+encodeURIComponent('Olá, quero agendar: '+s+' - Nome: '+n+' - Telefone: '+p+' - Data: '+d),'_blank')" style="max-width:700px">
+    <label>Nome</label><br><input id="name" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;background:#0a0a0a;border:1px solid rgba(200,160,70,0.04);color:#d9be86"><br>
+    <label style="margin-top:8px">Telefone</label><br><input id="phone" required style="width:100%;padding:8px;margin-top:6px;border-radius:6px;background:#0a0a0a;border:1px solid rgba(200,160,70,0.04);color:#d9be86"><br>
+    <label style="margin-top:8px">Serviço</label><br><select id="service" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;background:#0a0a0a;border:1px solid rgba(200,160,70,0.04);color:#d9be86"><option>Revisão Geral</option><option>Suspensão</option><option>Freios</option><option>Troca de Óleos</option><option>Injeção Eletrônica</option><option>Airbag & ABS</option></select><br>
+    <label style="margin-top:8px">Data</label><br><input type="date" id="date" style="width:100%;padding:8px;margin-top:6px;border-radius:6px;background:#0a0a0a;border:1px solid rgba(200,160,70,0.04);color:#d9be86"><br>
+    <div style="margin-top:12px"><button style="background:var(--gold);color:#000;padding:10px 14px;border-radius:8px;border:0;font-weight:700">Enviar pelo WhatsApp</button></div>
+  </form>
+  <div style="margin-top:18px"><iframe src="https://www.google.com/maps?q=Qd%2013%20Lote%2022%20Lunabel%203%20Novo%20Gama%20GO&output=embed" style="width:100%;height:300px;border:0;border-radius:8px"></iframe></div>
+</section>
+
+</main>
+<footer class="footer">
+  © 2025 Fenixcar — Qd 13 Lote 22, Lunabel 3, Novo Gama - GO | Instagram: @fenixcar2023
+</footer>
+<a href="https://wa.me/5561986221002" style="position:fixed;right:18px;bottom:18px;background:var(--gold);color:#000;padding:12px 14px;border-radius:999px;font-weight:700;text-decoration:none">WhatsApp</a>
+</body></html>
