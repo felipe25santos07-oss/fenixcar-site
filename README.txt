@@ -1,3 +1,3 @@
-Fenixcar - Site multi-página
+Fenixcar - Versão melhorada
 
-Descompacte e envie para o GitHub (crie repositório e envie os arquivos) ou use GitHub web upload. Depois importe no Vercel (conectar ao repositório) para publicar.
+Descompacte e envie os arquivos (index.html + assets) ao seu repositório GitHub e depois faça o deploy no Vercel ou GitHub Pages.
